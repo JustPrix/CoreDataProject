@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		D122593123D6E831008BAA67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D122593023D6E831008BAA67 /* AppDelegate.swift */; };
-		D122593323D6E831008BAA67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D122593223D6E831008BAA67 /* ViewController.swift */; };
 		D122593623D6E831008BAA67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D122593423D6E831008BAA67 /* Main.storyboard */; };
 		D122593923D6E831008BAA67 /* CoreDataExamProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D122593723D6E831008BAA67 /* CoreDataExamProject.xcdatamodeld */; };
 		D122593B23D6E831008BAA67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D122593A23D6E831008BAA67 /* Assets.xcassets */; };
 		D122593E23D6E831008BAA67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D122593C23D6E831008BAA67 /* LaunchScreen.storyboard */; };
+		D122594623D6F004008BAA67 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D122594523D6F004008BAA67 /* RegisterViewController.swift */; };
+		D122594823D6F012008BAA67 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D122594723D6F012008BAA67 /* LoginViewController.swift */; };
+		D122594A23D6F026008BAA67 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D122594923D6F026008BAA67 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D122592D23D6E831008BAA67 /* CoreDataExamProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataExamProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D122593023D6E831008BAA67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D122593223D6E831008BAA67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D122593523D6E831008BAA67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D122593823D6E831008BAA67 /* CoreDataExamProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataExamProject.xcdatamodel; sourceTree = "<group>"; };
 		D122593A23D6E831008BAA67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D122593D23D6E831008BAA67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D122593F23D6E831008BAA67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D122594523D6F004008BAA67 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D122594723D6F012008BAA67 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D122594923D6F026008BAA67 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +61,14 @@
 			isa = PBXGroup;
 			children = (
 				D122593023D6E831008BAA67 /* AppDelegate.swift */,
-				D122593223D6E831008BAA67 /* ViewController.swift */,
 				D122593423D6E831008BAA67 /* Main.storyboard */,
 				D122593A23D6E831008BAA67 /* Assets.xcassets */,
 				D122593C23D6E831008BAA67 /* LaunchScreen.storyboard */,
 				D122593F23D6E831008BAA67 /* Info.plist */,
 				D122593723D6E831008BAA67 /* CoreDataExamProject.xcdatamodeld */,
+				D122594523D6F004008BAA67 /* RegisterViewController.swift */,
+				D122594723D6F012008BAA67 /* LoginViewController.swift */,
+				D122594923D6F026008BAA67 /* ProfileViewController.swift */,
 			);
 			path = CoreDataExamProject;
 			sourceTree = "<group>";
@@ -139,9 +145,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D122594A23D6F026008BAA67 /* ProfileViewController.swift in Sources */,
 				D122593923D6E831008BAA67 /* CoreDataExamProject.xcdatamodeld in Sources */,
-				D122593323D6E831008BAA67 /* ViewController.swift in Sources */,
 				D122593123D6E831008BAA67 /* AppDelegate.swift in Sources */,
+				D122594823D6F012008BAA67 /* LoginViewController.swift in Sources */,
+				D122594623D6F004008BAA67 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
