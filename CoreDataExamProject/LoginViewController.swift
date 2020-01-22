@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var txtFldEmail: UITextField!
@@ -23,6 +24,32 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func btnLogin(_ sender: UIButton) {
+        let usermail = txtFldEmail.text!
+        let password = txtFldPassword.text!
+        
+        if (usermail == "" || password == "") {
+            print("Password or email field empty")
+            return
+        }
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
+        request.predicate = NSPredicate(format: "userName = %@", usermail)
+        request.returnsObjectsAsFaults = false
+        
+        do {
+            let result = try managedContext.fetch(request)
+            
+            for data in result as! [NSManagedObject] {
+                let passwordFromData = data.value(forKey: "userPassword") as! String
+                if password == passwordFromData {
+                    print("Success")
+                }
+            }
+        } catch let err as NSError {
+            print("Could not, \(err), \(err.localizedDescription)")
+        }
     }
     
 
