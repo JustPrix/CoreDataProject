@@ -57,6 +57,11 @@ class LoginViewController: UIViewController {
         
         //self.tabBarController?.performSegue(withIdentifier: "profileSegue", sender: self.tabBarController)
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let mailOfUserLogin = txtFldEmail.text!
+        let vc = segue.destination as? ProfileViewController
+        vc?.mailOfUser = mailOfUserLogin
+    }
     
     /*
     // MARK: - Navigation

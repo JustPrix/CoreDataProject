@@ -19,7 +19,7 @@ class ProfileViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
     }
     
     
-    var mailOfUser = "antonio@mail.com"
+    var mailOfUser = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
