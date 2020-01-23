@@ -69,6 +69,9 @@
                                 <state key="normal" title="Forgot Password">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnForfotPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W3F-cH-QyW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -372,7 +375,7 @@
                                     <action selector="btnRegister:" destination="DUF-Dt-fUG" eventType="touchUpInside" id="oF1-rm-asB"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white-icon-png-4" translatesAutoresizingMaskIntoConstraints="NO" id="xxg-QA-QUm">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white-icon-png-4" translatesAutoresizingMaskIntoConstraints="NO" id="xxg-QA-QUm">
                                 <rect key="frame" x="122" y="20" width="128" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="WIO-Lv-BDC"/>

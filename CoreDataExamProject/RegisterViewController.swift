@@ -20,7 +20,7 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
     @IBOutlet weak var citySelect: UIPickerView!
     
     //var people:[NSManagedObject] = []
-    //var city:[NSManagedObject] = []
+    var cityData:[NSManagedObject] = []
     let arrayGender = ["Male","Female","Other"]
     
     override func viewDidLoad() {
@@ -90,6 +90,7 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
         }
     }
     
+    //Image Seletion Functions
     var imgPicker:UIImagePickerController!
     @IBAction func PickImageOnTapAction(_ sender: UITapGestureRecognizer) {
         
@@ -99,23 +100,22 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate,UIPickerVie
         //self.navigationController?.pushViewController(imgPicker, animated: true)
         self.present(imgPicker, animated: true, completion: nil)
     }
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let img = info[UIImagePickerControllerOriginalImage] as! UIImage!
         imgUser.image = img
         self.dismiss(animated: true, completion: nil)
     }
-    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
     }
     
+    //Picker View Functions
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        return  1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 1//city.count
+        return cityData.count
     }
     /*
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

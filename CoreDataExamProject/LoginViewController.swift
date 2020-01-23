@@ -34,17 +34,18 @@ class LoginViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.persistentContainer.viewContext
         
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
-        request.predicate = NSPredicate(format: "userName = %@", usermail)
+        let request = NSFetchRequest<NSManagedObject>(entityName: "UserInfo")
+        request.predicate = NSPredicate(format: "emailID = %@", usermail)
         request.returnsObjectsAsFaults = false
         
         do {
             let result = try managedContext.fetch(request)
             
-            for data in result as! [NSManagedObject] {
+            for data in result{
                 let passwordFromData = data.value(forKey: "userPassword") as! String
                 if password == passwordFromData {
                     print("Success")
+                    performSegue(withIdentifier: "profileSegue", sender: sender)
                 }
             }
         } catch let err as NSError {
@@ -52,7 +53,11 @@ class LoginViewController: UIViewController {
         }
     }
     
-
+    @IBAction func btnForfotPassword(_ sender: UIButton) {
+        
+        //self.tabBarController?.performSegue(withIdentifier: "profileSegue", sender: self.tabBarController)
+    }
+    
     /*
     // MARK: - Navigation
 
