@@ -10,6 +10,10 @@ import UIKit
 import CoreData
 
 class ProfileViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
+    @IBOutlet weak var txtFldUsername: UITextField!
+    @IBOutlet weak var txtFldPassword: UITextField!
+    @IBOutlet weak var txtFldEmail: UITextField!
+    @IBOutlet weak var sgmtGender: UISegmentedControl!
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 0
     }
@@ -20,6 +24,7 @@ class ProfileViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
     
     
     var mailOfUser = String()
+    let arrayGender = ["Male","Female","Other"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,10 +52,10 @@ class ProfileViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
         do {
             let result = try managedContext.fetch(fetchRequest)
             for data in result as! [NSManagedObject]{
-                print(data.value(forKey: "userName")!)
-                print(data.value(forKey: "userPassword")!)
-                print(data.value(forKey: "gender")!)
-                print(data.value(forKey: "emailID")!)
+                txtFldUsername.text = data.value(forKey: "userName")! as? String
+                txtFldPassword.text = data.value(forKey: "userPassword")! as? String
+                sgmtGender.selectedSegmentIndex = arrayGender.index(of: data.value(forKey: "gender")! as! String)!
+                txtFldEmail.text = data.value(forKey: "emailID")! as? String
             }
         } catch let err as NSError {
             print("Error \(err), \(err.localizedDescription)")

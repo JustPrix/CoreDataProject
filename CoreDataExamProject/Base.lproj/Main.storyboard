@@ -256,6 +256,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fbZ-pd-RLc"/>
                     </view>
+                    <connections>
+                        <outlet property="sgmtGender" destination="wgM-yt-Crc" id="7fY-M9-im5"/>
+                        <outlet property="txtFldEmail" destination="7sG-Jg-jR3" id="ccD-lc-d6r"/>
+                        <outlet property="txtFldPassword" destination="NgP-Sq-7vi" id="al9-Lh-Pca"/>
+                        <outlet property="txtFldUsername" destination="GOn-he-QPd" id="Hog-Ku-IE1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="alS-KM-DdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
